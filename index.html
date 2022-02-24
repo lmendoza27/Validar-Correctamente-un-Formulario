@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="img/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Title Page-->
+    <title>AAMM - Registro de Usuario</title>
+	<script src="js/removeBanner.js"></script>
+    <!-- Icons font CSS-->
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+    <script type="text/javascript" src='https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.3.min.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+
+    <!-- OMIT BANNER 000WEBHOST-->
+    
+    <!-- AGREGADOS -->
+
+    
+    <!---->
+
+    <!-- Main CSS-->
+    <link href="css/main2.css" rel="stylesheet" media="all">
+</head>
+
+<body>
+    
+<style>
+    
+    body{
+        
+        background-color: red;
+        
+    }
+    
+    .input--style-4:hover{
+    /*     background-color: #b33678;
+        border-style: solid;*/
+       /* For browsers that do not support gradients */
+  background-image: linear-gradient(180deg, #614385, #516395);
+  border-style: solid;
+  border-color: gold;
+        color: white;
+    }
+    
+</style>
+    
+    <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+        <div class="wrapper wrapper--w680">
+            <div class="card card-4">
+                <div class="card-body">
+                    <h2 class="title"><b>Formulario de Registro </b></h2>
+                    <form method="post"  enctype="multipart/form-data" action="Data.php">
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Nombre(s):</label>
+                                    <input class="input--style-4" required pattern="s*(\S\s*){3,}" type="text" name="first_name" autocomplete="off" >
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Apellido:</label>
+                                    <input class="input--style-4"  required pattern="s*(\S\s*){4,}" type="text" name="last_name" >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Fecha de Nacimiento:</label>
+                                    <div class="input-group-icon">
+            <input class="input--style-4" id="nacimiento"  type="date" name="birthday"  required autocomplete="off">
+                              
+                      <!-- -->     
+                                
+                                
+                                        
+                                        <!-- 
+                                        https://www.html5pattern.com/Dates
+                                        Para el formato de MYSQL YY-MM-DD es este Pattern
+                                        
+                                           
+                                        pattern="(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))" 
+
+                                        
+                                        -->
+                                  <!--  <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>-->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Género</label>
+                                    <div class="p-t-10">
+                                        <label class="radio-container m-r-45">Hombre
+                                            <input type="radio"  name="gender" value="hombre" required>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="radio-container">Mujer
+                                            <input type="radio" value="mujer" name="gender">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Nombre de Usuario</label>
+                                    <input class="input--style-4" id="usuario" type="text" name="username" minlength="5" pattern=".{5,}"  required>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Correo Electrónico</label>
+                                    <input class="input--style-4" type="Email" name="correo" required>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Ingrese Contraseña</label>
+                                    <input class="input--style-4"  required pattern="s*(\S\s*){6,}" id="txtPassword" type="password" name="contra" >
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Repita Contraseña</label>
+                                    <input class="input--style-4"  required pattern="s*(\S\s*){6,}" id="txtConfirmPassword" type="password" name="email2">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label class="label">Tipo</label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="subject" required>
+                                    <option value="" disabled="disabled" selected="selected">Escoja una opción</option>
+                                    <option value="1">Estudiante</option>
+                                    <option value="2">Profesor</option>
+                                 
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                        <div class="p-t-15">
+                            <button class="btn btn--radius-2 btn--blue" name="subida" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="vendor/datepicker/moment.min.js"></script>
+    <script src="vendor/datepicker/daterangepicker.js"></script>
+
+    <!-- Main JS-->
+    <script src="js/global.js"></script>
+
+ <script type="text/javascript">
+    
+       window.onload = function () {
+        var txtPassword = document.getElementById("txtPassword");
+        var txtConfirmPassword = document.getElementById("txtConfirmPassword");
+        txtPassword.onchange = ConfirmPassword;
+        txtConfirmPassword.onkeyup = ConfirmPassword;
+        function ConfirmPassword() {
+            txtConfirmPassword.setCustomValidity("");
+            if (txtPassword.value != txtConfirmPassword.value) {
+                txtConfirmPassword.setCustomValidity("Este Password no coincide...");
+            }
+        }
+    }
+    
+    
+       $("input#usuario").on({
+  keydown: function(e) {
+    if (e.which === 32)
+      return false;
+  },
+  change: function() {
+    this.value = this.value.replace(/\s/g, "");
+  }
+});
+    
+  $( function() {
+  $( "#nacimiento" ).datepicker();
+    $( "#nacimiento" ).datepicker("option", "dateFormat", 'yy-mm-dd');
+  } );
+
+    
+    
+    
+</script>
+
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
+<!-- end document-->
